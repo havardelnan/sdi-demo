@@ -1,7 +1,7 @@
 apiVersion: policy/v1beta1
 kind: PodSecurityPolicy
 metadata:
-  name: test1-psp
+  name: {{ .Release.Name}}-psp
 spec:
   privileged: false  # Don't allow privileged pods!
   seLinux:

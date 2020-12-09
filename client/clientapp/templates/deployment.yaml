@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: infinite-calls
-  namespace: test1
+  name: {{ .Release.Name}}
+  namespace: {{ .Release.namespace }}
   labels:
-    app: infinite-calls
+    app: {{ .Release.Name}}
 spec:
   replicas: {{.Values.replicaCount}}
   selector:
     matchLabels:
-      app: infinite-calls
+      app: {{ .Release.Name}}
   template:
     metadata:
-      name: infinite-calls
-      namespace: test1
+      name: {{ .Release.Name}}
+      namespace: {{ .Release.namespace }}
       labels:
-        app: infinite-calls
+        app: {{ .Release.Name}}
     spec:
       containers:
-      - name: infinite-calls
+      - name: {{ .Release.Name}}
         image: busybox
         command:
         - /bin/sh
