@@ -1,7 +1,7 @@
 apiVersion: scheduling.k8s.io/v1
 kind: PriorityClass
 metadata:
-  name: low-priority2
+  name: low-priority
 value: 50000
 globalDefault: false
 description: "Setter workload til lav prioritet for å tillate andre workloads når clusteret overbelastes"
