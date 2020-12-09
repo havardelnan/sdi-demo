@@ -1,0 +1,26 @@
+apiVersion: run.tanzu.vmware.com/v1alpha1    
+kind: TanzuKubernetesCluster                 
+metadata:
+  name: sdi-demo-server
+  namespace: sdi-ns                     
+spec:
+  distribution:
+    version: 1.18.5
+  topology:
+    controlPlane:
+      count: 3
+      class: guaranteed-small
+      storageClass: vsan-default-storage-policy
+    workers:
+      count: 3
+      class: best-effort-large
+      storageClass: vsan-default-storage-policy
+  settings:
+    network:
+      cni:
+        name: calico 
+      services:
+        cidrBlocks: ["198.51.100.0/24"] 
+      pods:
+        cidrBlocks: ["198.18.0.0/15"]
+
