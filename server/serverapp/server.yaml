@@ -155,7 +155,7 @@ metadata:
   labels:
     app: infinite-calls
 spec:
-  replicas: 0
+  replicas: 10
   selector:
     matchLabels:
       app: infinite-calls
