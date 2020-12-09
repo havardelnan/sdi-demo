@@ -75,7 +75,6 @@ spec:
   selector:
     matchLabels:
       run: php-apache
-  replicas: 1
   template:
     metadata:
       labels:
