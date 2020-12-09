@@ -1,0 +1,6 @@
+# Default values for serverapp.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+minReplicas: 1
+maxReplicas: 200
+targetCPUUtilizationPercentage: 50

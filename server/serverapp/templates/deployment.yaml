@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name}}
+  namespace: {{ .Release.namespace}}
+spec:
+  selector:
+    matchLabels:
+      run: {{ .Release.Name}}
+  template:
+    metadata:
+      labels:
+        run: {{ .Release.Name}}
+    spec:
+      containers:
+      - name: {{ .Release.Name}}
+        image: webdevops/php-apache-dev
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+        volumeMounts:
+          - name: loadphp
+            mountPath: "/app"
+            readOnly: true
+      priorityClassName: low-priority
+      volumes:
+        - name: loadphp
+          configMap:
+            name: load-php
