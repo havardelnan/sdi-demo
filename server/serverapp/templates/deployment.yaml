@@ -8,9 +8,9 @@ spec:
     matchLabels:
       run: {{ .Release.Name}}
   template:
-    annotations:
-      linkerd.io/inject: enabled
     metadata:
+      annotations:
+        linkerd.io/inject: enabled
       labels:
         run: {{ .Release.Name}}
     spec:
