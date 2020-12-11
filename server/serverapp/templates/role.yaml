@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Name}}-role
   namespace: {{ .Release.namespace }}
 rules:
-- apiGroups: [policy]
+- apiGroups: ['policy','extensions']
   resources: [podsecuritypolicies]
   verbs: [use]
   resourceNames: [{{ .Release.Name}}-psp]
