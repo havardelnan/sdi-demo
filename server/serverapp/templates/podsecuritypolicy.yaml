@@ -4,6 +4,9 @@ metadata:
   name: {{ .Release.Name}}-psp
 spec:
   privileged: false  # Don't allow privileged pods!
+  allowedCapabilities:
+  - NET_ADMIN
+  - NET_RAW
   seLinux:
     rule: RunAsAny
   supplementalGroups:
