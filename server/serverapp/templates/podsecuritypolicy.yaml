@@ -4,7 +4,6 @@ metadata:
   name: {{ .Release.Name}}-psp
 spec:
   privileged: false  # Don't allow privileged pods!
-  allowPrivilegeEscalation: false
   allowedCapabilities:
   - NET_ADMIN
   - NET_RAW
