@@ -3,4 +3,4 @@
 # Declare variables to be passed into your templates.
 minReplicas: 1
 maxReplicas: 200
-targetCPUUtilizationPercentage: 50
+targetCPUUtilizationPercentage: 80
