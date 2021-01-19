@@ -14,9 +14,6 @@ spec:
     metadata:
       name: {{ .Release.Name}}
       namespace: {{ .Release.namespace }}
-      annotations:
-        linkerd.io/inject: enabled
-        config.linkerd.io/proxy-cpu-request: "0.5"
       labels:
         app: {{ .Release.Name}}
     spec:
