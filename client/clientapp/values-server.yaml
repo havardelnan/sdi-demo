@@ -3,4 +3,4 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 0
-serverHost: "server-serverapp.server.svc"
+serverHost: "server.server.svc"
