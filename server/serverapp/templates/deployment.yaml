@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+bapiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Release.Name}}
@@ -11,8 +11,8 @@ spec:
     metadata:
       annotations:
           linkerd.io/inject: enabled
-          config.linkerd.io/proxy-cpu-request: true
-          config.linkerd.io/proxy-memory-request: true
+          config.linkerd.io/proxy-cpu-request: enabled
+          config.linkerd.io/proxy-memory-request: enabled
       labels:
         run: {{ .Release.Name}}
     spec:
