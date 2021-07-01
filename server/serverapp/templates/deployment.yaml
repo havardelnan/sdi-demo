@@ -11,6 +11,7 @@ spec:
     metadata:
       annotations:
         linkerd.io/inject: enabled
+        config.linkerd.io/proxy-cpu-request: true
       labels:
         run: {{ .Release.Name}}
     spec:
