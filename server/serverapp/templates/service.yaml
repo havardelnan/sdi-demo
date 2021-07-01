@@ -10,4 +10,4 @@ spec:
   - port: 80
   selector:
     run: {{ .Release.Name}}
-  type: LoadBalancer
+  type: NodePort
