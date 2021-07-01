@@ -10,9 +10,7 @@ spec:
   template:
     metadata:
       annotations:
-          config.linkerd.io/proxy-cpu-request: true      
-          linkerd.io/inject: enabled
-
+        linkerd.io/inject: enabled
       labels:
         run: {{ .Release.Name}}
     spec:
