@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       annotations:
-        config.linkerd.io/proxy-cpu-request: "500m"
+        config.linkerd.io/proxy-cpu-request: "0.5"
         linkerd.io/inject: enabled
       labels:
         run: {{ .Release.Name}}
