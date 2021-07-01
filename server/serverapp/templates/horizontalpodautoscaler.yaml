@@ -18,12 +18,4 @@ spec:
       target:
         type: Utilization
         averageUtilization: {{.Values.targetCPUUtilizationPercentage}}
-behavior:
-  scaleDown:
-    policies:
-    - type: Pods
-      value: 4
-      periodSeconds: 10
-    - type: Percent
-      value: 10
-      periodSeconds: 20
+
