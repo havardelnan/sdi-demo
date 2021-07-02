@@ -12,6 +12,8 @@ spec:
       app: {{ .Release.Name}}
   template:
     metadata:
+      annotations:
+        linkerd.io/inject: enabled
       name: {{ .Release.Name}}
       namespace: {{ .Release.namespace }}
       labels:
