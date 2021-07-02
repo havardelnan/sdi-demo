@@ -5,5 +5,5 @@ metadata:
   namespace: {{ .Release.namespace}}
 data:
   index.php: 'test'
-  load.php: '<?php   $x = 0.0001;   for ($i = 0; $i <= 1000000; $i++) {     $x += sqrt($x);   }   echo "OK!"; ?>'
+  load.php: '<?php   $x = 0.0001;   for ($i = 0; $i <= 10000; $i++) {     $x += sqrt($x);   }   echo "OK!"; ?>'
   phpinfo.php: '<?php phpinfo(); ?>'
